@@ -1,0 +1,31 @@
+section_title: "Experience"
+show: true
+
+jobs:
+  - title: "Senior Position Title"
+    company: "Company Name"
+    company_url: "https://company.com"
+    location: "City, State"
+    start_date: "Jan 2022"
+    end_date: ""
+    current: true
+    description: |
+      Description of your role and responsibilities. Highlight key
+      achievements and the impact you made in this position.
+    highlights:
+      - "Key achievement or responsibility"
+      - "Another significant accomplishment"
+      - "Third notable contribution"
+
+  - title: "Previous Position"
+    company: "Previous Company"
+    company_url: ""
+    location: "City, State"
+    start_date: "Jun 2019"
+    end_date: "Dec 2021"
+    current: false
+    description: |
+      Description of your previous role and what you accomplished.
+    highlights:
+      - "Achievement from this role"
+      - "Another accomplishment"

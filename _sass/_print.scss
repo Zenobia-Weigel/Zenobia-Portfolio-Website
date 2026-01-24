@@ -1,0 +1,76 @@
+@media print {
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+    color: #000;
+    background: #fff;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .header,
+  .footer,
+  .btn,
+  .social-links {
+    display: none !important;
+  }
+
+  .profile {
+    padding: 0 0 1rem 0;
+
+    &__photo {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  .section {
+    padding: 1rem 0;
+    page-break-inside: avoid;
+
+    &__title {
+      font-size: 14pt;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .timeline {
+    &__item {
+      padding-bottom: 0.75rem;
+
+      &::before {
+        background: #000;
+      }
+    }
+
+    &__title {
+      font-size: 12pt;
+    }
+  }
+
+  .skills {
+    &__grid {
+      display: block;
+    }
+
+    &__category {
+      display: inline-block;
+      width: 48%;
+      vertical-align: top;
+      background: none;
+      padding: 0.5rem 0;
+    }
+  }
+
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  a[href]::after {
+    content: none;
+  }
+}

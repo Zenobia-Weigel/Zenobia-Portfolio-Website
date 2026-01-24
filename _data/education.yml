@@ -1,0 +1,17 @@
+section_title: "Education"
+show: true
+
+schools:
+  - degree: "Bachelor of Science"
+    field: "Your Major"
+    school: "University Name"
+    school_url: "https://university.edu"
+    location: "City, State"
+    start_date: "2015"
+    end_date: "2019"
+    gpa: ""
+    description: |
+      Additional details about your education, honors, or activities.
+    courses:
+      - "Relevant Course 1"
+      - "Relevant Course 2"

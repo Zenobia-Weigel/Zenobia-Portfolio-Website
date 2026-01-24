@@ -1,0 +1,47 @@
+.skills {
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-xl;
+
+    @media (min-width: $breakpoint-md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: $breakpoint-lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__category {
+    background: $surface;
+    padding: $spacing-lg;
+    border-radius: $radius-lg;
+  }
+
+  &__category-name {
+    font-size: $font-size-md;
+    font-weight: 600;
+    margin-bottom: $spacing-md;
+    color: $text-color;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-sm;
+  }
+
+  &__item {
+    display: inline-block;
+    padding: $spacing-xs $spacing-sm;
+    background: $background;
+    border: 1px solid $border;
+    border-radius: $radius-md;
+    font-size: $font-size-sm;
+    color: $text-color;
+  }
+}

@@ -1,0 +1,35 @@
+{% if site.data.profile.social %}
+<div class="social-links">
+  {% for link in site.data.profile.social %}
+  <a href="{{ link.url }}" class="social-links__link" target="_blank" rel="noopener noreferrer">
+    {% case link.platform %}
+      {% when 'github' %}
+        GitHub
+      {% when 'linkedin' %}
+        LinkedIn
+      {% when 'twitter' %}
+        Twitter
+      {% when 'email' %}
+        Email
+      {% when 'website' %}
+        Website
+      {% when 'instagram' %}
+        Instagram
+      {% when 'dribbble' %}
+        Dribbble
+      {% when 'behance' %}
+        Behance
+      {% when 'medium' %}
+        Medium
+      {% when 'youtube' %}
+        YouTube
+      {% else %}
+        {{ link.platform | capitalize }}
+    {% endcase %}
+    {% if link.username %}
+      <span>({{ link.username }})</span>
+    {% endif %}
+  </a>
+  {% endfor %}
+</div>
+{% endif %}

@@ -1,0 +1,47 @@
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: $spacing-lg;
+
+  @media (min-width: $breakpoint-md) {
+    padding: $spacing-2xl;
+  }
+}
+
+.resume {
+  background: $background;
+}
+
+.section {
+  padding: $spacing-2xl 0;
+  border-bottom: 1px solid $border;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &__title {
+    font-size: $font-size-xl;
+    font-weight: 600;
+    color: $text-color;
+    margin-bottom: $spacing-xl;
+    padding-bottom: $spacing-sm;
+    border-bottom: 2px solid $primary-color;
+    display: inline-block;
+  }
+}
+
+.header {
+  background: $surface;
+  border-bottom: 1px solid $border;
+}
+
+.footer {
+  background: $surface;
+  border-top: 1px solid $border;
+  padding: $spacing-lg 0;
+  text-align: center;
+  font-size: $font-size-sm;
+  color: $text-light;
+}

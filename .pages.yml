@@ -1,0 +1,262 @@
+# Pages CMS Configuration
+# Documentation: https://pagescms.org/docs/configuration/
+
+media: images
+
+content:
+  # Profile & Basic Information
+  - name: profile
+    label: Profile
+    path: _data/profile.yml
+    type: file
+    description: Your personal information, photo, and social links
+    fields:
+      - name: name
+        label: Full Name
+        type: string
+        required: true
+      - name: title
+        label: Professional Title
+        type: string
+        required: true
+        description: e.g., "Software Engineer" or "Marketing Manager"
+      - name: email
+        label: Email Address
+        type: string
+        pattern:
+          regex: '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+          message: Please enter a valid email address
+      - name: phone
+        label: Phone Number
+        type: string
+      - name: location
+        label: Location
+        type: string
+        description: e.g., "San Francisco, CA"
+      - name: photo
+        label: Profile Photo
+        type: image
+      - name: summary
+        label: Brief Summary
+        type: text
+        description: A short tagline or summary for the header
+      - name: about
+        label: About Me
+        type: rich-text
+        description: Detailed bio - supports formatting
+      - name: social
+        label: Social Links
+        type: object
+        list: true
+        fields:
+          - name: platform
+            label: Platform
+            type: select
+            options:
+              - { label: GitHub, value: github }
+              - { label: LinkedIn, value: linkedin }
+              - { label: Twitter/X, value: twitter }
+              - { label: Email, value: email }
+              - { label: Website, value: website }
+              - { label: Instagram, value: instagram }
+              - { label: Dribbble, value: dribbble }
+              - { label: Behance, value: behance }
+              - { label: Medium, value: medium }
+              - { label: YouTube, value: youtube }
+          - name: url
+            label: URL
+            type: string
+            required: true
+            description: Full URL or mailto:email@example.com
+          - name: username
+            label: Display Username
+            type: string
+            description: Optional - shown as link text
+
+  # Work Experience
+  - name: experience
+    label: Experience
+    path: _data/experience.yml
+    type: file
+    description: Your work history and professional experience
+    fields:
+      - name: section_title
+        label: Section Title
+        type: string
+        default: Experience
+      - name: show
+        label: Show This Section
+        type: boolean
+        default: true
+      - name: jobs
+        label: Jobs
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: Job Title
+            type: string
+            required: true
+          - name: company
+            label: Company Name
+            type: string
+            required: true
+          - name: company_url
+            label: Company Website
+            type: string
+            description: Optional link to company
+          - name: location
+            label: Location
+            type: string
+          - name: start_date
+            label: Start Date
+            type: string
+            required: true
+            description: e.g., "Jan 2022" or "2022"
+          - name: end_date
+            label: End Date
+            type: string
+            description: Leave empty if current position
+          - name: current
+            label: Current Position
+            type: boolean
+            default: false
+          - name: description
+            label: Description
+            type: rich-text
+            description: Overview of your role and responsibilities
+          - name: highlights
+            label: Key Achievements
+            type: string
+            list: true
+            description: Bullet points of accomplishments
+
+  # Education
+  - name: education
+    label: Education
+    path: _data/education.yml
+    type: file
+    description: Your educational background
+    fields:
+      - name: section_title
+        label: Section Title
+        type: string
+        default: Education
+      - name: show
+        label: Show This Section
+        type: boolean
+        default: true
+      - name: schools
+        label: Schools
+        type: object
+        list: true
+        fields:
+          - name: degree
+            label: Degree
+            type: string
+            required: true
+            description: e.g., "Bachelor of Science"
+          - name: field
+            label: Field of Study
+            type: string
+            description: e.g., "Computer Science"
+          - name: school
+            label: School Name
+            type: string
+            required: true
+          - name: school_url
+            label: School Website
+            type: string
+          - name: location
+            label: Location
+            type: string
+          - name: start_date
+            label: Start Date
+            type: string
+          - name: end_date
+            label: End Date
+            type: string
+            description: Or expected graduation
+          - name: gpa
+            label: GPA
+            type: string
+            description: Optional
+          - name: description
+            label: Description
+            type: rich-text
+            description: Honors, activities, thesis, etc.
+          - name: courses
+            label: Relevant Courses
+            type: string
+            list: true
+
+  # Skills
+  - name: skills
+    label: Skills
+    path: _data/skills.yml
+    type: file
+    description: Your skills organized by category
+    fields:
+      - name: section_title
+        label: Section Title
+        type: string
+        default: Skills
+      - name: show
+        label: Show This Section
+        type: boolean
+        default: true
+      - name: categories
+        label: Skill Categories
+        type: object
+        list: true
+        fields:
+          - name: name
+            label: Category Name
+            type: string
+            required: true
+            description: e.g., "Languages", "Frameworks", "Tools"
+          - name: items
+            label: Skills
+            type: string
+            list: true
+            description: Individual skills in this category
+
+  # Site Settings
+  - name: settings
+    label: Settings
+    path: _data/settings.yml
+    type: file
+    description: Site appearance and feature toggles
+    fields:
+      - name: primary_color
+        label: Primary Color
+        type: string
+        default: "#2563eb"
+        description: Hex color code for accent color
+      - name: secondary_color
+        label: Secondary Color
+        type: string
+        default: "#1e40af"
+        description: Hex color code for hover states
+      - name: show_pdf_button
+        label: Show Download PDF Button
+        type: boolean
+        default: true
+      - name: pdf_url
+        label: PDF Resume URL
+        type: string
+        description: Link to downloadable PDF version
+      - name: google_analytics
+        label: Google Analytics ID
+        type: string
+        description: Optional tracking ID
+      - name: section_order
+        label: Section Order
+        type: select
+        list: true
+        options:
+          - about
+          - experience
+          - education
+          - skills
+        description: Drag to reorder sections on the page

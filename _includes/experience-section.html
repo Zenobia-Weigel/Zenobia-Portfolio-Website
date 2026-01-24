@@ -1,0 +1,38 @@
+<section class="section experience" id="experience">
+  <h2 class="section__title">{{ site.data.experience.section_title }}</h2>
+
+  <div class="timeline">
+    {% for job in site.data.experience.jobs %}
+    <div class="timeline__item">
+      <div class="timeline__header">
+        <h3 class="timeline__title">{{ job.title }}</h3>
+        <div class="timeline__subtitle">
+          {% if job.company_url and job.company_url != "" %}
+          <a href="{{ job.company_url }}" target="_blank" rel="noopener">{{ job.company }}</a>
+          {% else %}
+          {{ job.company }}
+          {% endif %}
+          {% if job.location %} &middot; {{ job.location }}{% endif %}
+        </div>
+        <div class="timeline__date">
+          {{ job.start_date }} &ndash; {% if job.current %}Present{% else %}{{ job.end_date }}{% endif %}
+        </div>
+      </div>
+
+      {% if job.description %}
+      <div class="timeline__description">
+        {{ job.description | markdownify }}
+      </div>
+      {% endif %}
+
+      {% if job.highlights and job.highlights.size > 0 %}
+      <ul class="timeline__highlights">
+        {% for highlight in job.highlights %}
+        <li>{{ highlight }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</section>

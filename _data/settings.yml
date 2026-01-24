@@ -1,0 +1,10 @@
+primary_color: "#2563eb"
+secondary_color: "#1e40af"
+show_pdf_button: true
+pdf_url: ""
+google_analytics: ""
+section_order:
+  - about
+  - experience
+  - education
+  - skills

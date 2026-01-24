@@ -1,0 +1,21 @@
+section_title: "Skills"
+show: true
+
+categories:
+  - name: "Category 1"
+    items:
+      - "Skill 1"
+      - "Skill 2"
+      - "Skill 3"
+
+  - name: "Category 2"
+    items:
+      - "Skill A"
+      - "Skill B"
+      - "Skill C"
+
+  - name: "Tools & Platforms"
+    items:
+      - "Tool 1"
+      - "Tool 2"
+      - "Tool 3"

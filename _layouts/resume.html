@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<article class="resume">
+  {% include profile-section.html %}
+
+  {% for section in site.data.settings.section_order %}
+    {% case section %}
+      {% when 'about' %}
+        {% include about-section.html %}
+      {% when 'experience' %}
+        {% if site.data.experience.show %}
+          {% include experience-section.html %}
+        {% endif %}
+      {% when 'education' %}
+        {% if site.data.education.show %}
+          {% include education-section.html %}
+        {% endif %}
+      {% when 'skills' %}
+        {% if site.data.skills.show %}
+          {% include skills-section.html %}
+        {% endif %}
+    {% endcase %}
+  {% endfor %}
+</article>

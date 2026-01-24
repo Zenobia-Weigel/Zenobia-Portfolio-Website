@@ -1,0 +1,82 @@
+.timeline {
+  position: relative;
+
+  &__item {
+    position: relative;
+    padding-bottom: $spacing-xl;
+    padding-left: $spacing-lg;
+    border-left: 2px solid $border;
+
+    &:last-child {
+      padding-bottom: 0;
+      border-left-color: transparent;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -7px;
+      top: 0;
+      width: 12px;
+      height: 12px;
+      background: $primary-color;
+      border-radius: $radius-full;
+      border: 2px solid $background;
+    }
+  }
+
+  &__header {
+    margin-bottom: $spacing-md;
+  }
+
+  &__title {
+    font-size: $font-size-lg;
+    font-weight: 600;
+    margin-bottom: $spacing-xs;
+    color: $text-color;
+  }
+
+  &__subtitle {
+    font-size: $font-size-md;
+    color: $text-color;
+    margin-bottom: $spacing-xs;
+
+    a {
+      color: $primary-color;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__date {
+    font-size: $font-size-sm;
+    color: $text-light;
+  }
+
+  &__description {
+    font-size: $font-size-md;
+    color: $text-color;
+    line-height: 1.7;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__highlights {
+    margin-top: $spacing-md;
+    padding-left: $spacing-lg;
+
+    li {
+      margin-bottom: $spacing-sm;
+      color: $text-color;
+      font-size: $font-size-sm;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

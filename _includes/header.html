@@ -1,0 +1,12 @@
+<header class="header">
+  <div class="container">
+    <nav class="nav">
+      <a href="{{ '/' | relative_url }}" class="nav__brand">{{ site.data.profile.name }}</a>
+      {% if site.data.settings.show_pdf_button and site.data.settings.pdf_url != "" %}
+      <a href="{{ site.data.settings.pdf_url }}" class="btn btn--primary btn--small" download>
+        Download PDF
+      </a>
+      {% endif %}
+    </nav>
+  </div>
+</header>

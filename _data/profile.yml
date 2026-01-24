@@ -1,0 +1,25 @@
+name: "Your Name"
+title: "Professional Title"
+email: "email@example.com"
+phone: "(555) 123-4567"
+location: "City, State"
+photo: "/images/profile.jpg"
+
+summary: >
+  Brief professional summary highlighting your expertise and career focus.
+
+about: |
+  A more detailed description of your professional background,
+  interests, and what drives you in your career.
+
+  You can include multiple paragraphs here to tell your story.
+
+social:
+  - platform: github
+    url: "https://github.com/username"
+    username: "username"
+  - platform: linkedin
+    url: "https://linkedin.com/in/username"
+    username: "username"
+  - platform: email
+    url: "mailto:email@example.com"

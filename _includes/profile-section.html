@@ -1,0 +1,28 @@
+<section class="profile">
+  {% if site.data.profile.photo %}
+  <img src="{{ site.data.profile.photo | relative_url }}"
+       alt="{{ site.data.profile.name }}"
+       class="profile__photo">
+  {% endif %}
+
+  <div class="profile__content">
+    <h1 class="profile__name">{{ site.data.profile.name }}</h1>
+    <p class="profile__title">{{ site.data.profile.title }}</p>
+
+    <div class="profile__contact">
+      {% if site.data.profile.email %}
+      <span class="contact-item">
+        <a href="mailto:{{ site.data.profile.email }}">{{ site.data.profile.email }}</a>
+      </span>
+      {% endif %}
+      {% if site.data.profile.phone %}
+      <span class="contact-item">{{ site.data.profile.phone }}</span>
+      {% endif %}
+      {% if site.data.profile.location %}
+      <span class="contact-item">{{ site.data.profile.location }}</span>
+      {% endif %}
+    </div>
+
+    {% include social-links.html %}
+  </div>
+</section>
