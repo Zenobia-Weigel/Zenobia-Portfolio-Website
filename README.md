@@ -15,7 +15,7 @@ A modern, minimal resume and portfolio website template built with Jekyll and in
 
 1. **Fork or clone this repository**
    ```bash
-   git clone https://github.com/YOUR-USERNAME/Zenobia-Portfolio-Website.git
+   git clone https://github.com/Zenobia-Weigel/Zenobia-Portfolio-Website.git
    ```
 
 2. **Enable GitHub Pages**
@@ -23,7 +23,7 @@ A modern, minimal resume and portfolio website template built with Jekyll and in
    - Navigate to Settings > Pages
    - Under "Source", select the `main` branch
    - Click Save
-   - Your site will be available at `https://YOUR-USERNAME.github.io/Zenobia-Portfolio-Website/`
+   - Your site will be available at `https://Zenobia-Weigel.github.io/Zenobia-Portfolio-Website/`
 
 3. **Edit content via Pages CMS**
    - Visit [pagescms.org](https://pagescms.org)
