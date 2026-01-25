@@ -53,16 +53,27 @@ content:
             label: Platform
             type: select
             options:
-              - { label: GitHub, value: github }
-              - { label: LinkedIn, value: linkedin }
-              - { label: Twitter/X, value: twitter }
-              - { label: Email, value: email }
-              - { label: Website, value: website }
-              - { label: Instagram, value: instagram }
-              - { label: Dribbble, value: dribbble }
-              - { label: Behance, value: behance }
-              - { label: Medium, value: medium }
-              - { label: YouTube, value: youtube }
+              values:
+                - value: github
+                  label: GitHub
+                - value: linkedin
+                  label: LinkedIn
+                - value: twitter
+                  label: Twitter/X
+                - value: email
+                  label: Email
+                - value: website
+                  label: Website
+                - value: instagram
+                  label: Instagram
+                - value: dribbble
+                  label: Dribbble
+                - value: behance
+                  label: Behance
+                - value: medium
+                  label: Medium
+                - value: youtube
+                  label: YouTube
           - name: url
             label: URL
             type: string
@@ -253,10 +264,11 @@ content:
       - name: section_order
         label: Section Order
         type: select
-        list: true
-        options:
-          - about
-          - experience
-          - education
-          - skills
         description: Drag to reorder sections on the page
+        options:
+          multiple: true
+          values:
+            - about
+            - experience
+            - education
+            - skills
