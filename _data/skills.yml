@@ -1,21 +1,28 @@
-section_title: "Skills"
+section_title: Skills
 show: true
-
 categories:
-  - name: "Category 1"
+  - name: Communications & Public Relations
     items:
-      - "Skill 1"
-      - "Skill 2"
-      - "Skill 3"
-
-  - name: "Category 2"
+      - Strategic communications planning
+      - Media relations & press outreach
+      - Press releases & media kits
+      - Thought leadership
+      - Crisis communications
+      - Executive and internal communications
+  - name: Content & Messaging
     items:
-      - "Skill A"
-      - "Skill B"
-      - "Skill C"
-
-  - name: "Tools & Platforms"
+      - Messaging development
+      - Copywriting & editing
+      - Content strategy
+      - Social media management (LinkedIn, Instagram, Facebook, TikTok, X)
+  - name: Events & Integrated Campaigns
     items:
-      - "Tool 1"
-      - "Tool 2"
-      - "Tool 3"
+      - Trade show and experiential marketing
+      - Logistical planning and vendor coordination
+      - Campaign execution and product launches
+      - Sales enablement materials
+  - name: Analytics & Platforms
+    items:
+      - HubSpot
+      - Google Analytics
+      - LinkedIn and Meta Insights
