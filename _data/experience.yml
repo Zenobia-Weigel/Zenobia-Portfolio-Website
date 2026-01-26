@@ -1,31 +1,52 @@
-section_title: "Experience"
+section_title: Experience
 show: true
-
 jobs:
-  - title: "Senior Position Title"
-    company: "Company Name"
-    company_url: "https://company.com"
-    location: "City, State"
-    start_date: "Jan 2022"
-    end_date: ""
+  - title: Public Relations Manager
+    company: The Hendey Group & THG Automation
+    company_url: https://thgautomation.com
+    location: Indianapolis, IN
+    start_date: July 2021
+    end_date: Present
     current: true
-    description: |
-      Description of your role and responsibilities. Highlight key
-      achievements and the impact you made in this position.
+    description: Lead integrated public relations and communications initiatives to
+      increase brand visibility and media engagement across B2B and industrial
+      automation audiences, securing coverage in local and industry
+      publications.
     highlights:
-      - "Key achievement or responsibility"
-      - "Another significant accomplishment"
-      - "Third notable contribution"
-
-  - title: "Previous Position"
-    company: "Previous Company"
-    company_url: ""
-    location: "City, State"
-    start_date: "Jun 2019"
-    end_date: "Dec 2021"
+      - Write and distribute press releases, media pitches, and thought
+        leadership content to support product launches, company initiatives, and
+        executive visibility.
+      - Plan and manage trade shows and industry events end to end, including
+        logistical planning, vendor coordination, and sales collateral
+        development, driving new customer inquiries and product demo requests.
+      - Develop strategic messaging that translates complex, technical subject
+        matter into clear, audience-appropriate communications supporting
+        business and sales objectives
+      - Used Google Analytics, Meta, and LinkedIn Insights to track performance,
+        report on KPIs, and inform campaign optimization.
+  - title: Customer Care Coordinator
+    company: La Beauté Spa du Jour
+    location: City, State
+    start_date: September 2020
+    end_date: April 2021
     current: false
-    description: |
-      Description of your previous role and what you accomplished.
-    highlights:
-      - "Achievement from this role"
-      - "Another accomplishment"
+    description: Promoted memberships and events, managed scheduling and social
+      media, and led the transition from paper to digital records to improve
+      client experience, retention, and staff efficiency.
+  - title: Assistant Marketing Coordinator
+    company: Studio 2000 Salon & Spa
+    start_date: September 2010
+    end_date: August 2020
+    current: false
+    description: Supported salon marketing, social media, email newsletters, and
+      in-salon promotions, helping grow online engagement by 15–20% and
+      strengthen product sales and client loyalty.
+  - title: Public Relations Intern
+    company: The Campus Citizen
+    company_url: https://www.thecampuscitizen.com
+    start_date: August 2019
+    end_date: December 2019
+    current: false
+    description: Managed social media and on-campus outreach, doubling Twitter
+      impressions and increasing advertising revenue by ~15% while contributing
+      weekly feature stories for the Culture section.
