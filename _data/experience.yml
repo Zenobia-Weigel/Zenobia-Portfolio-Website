@@ -26,7 +26,8 @@ jobs:
         report on KPIs, and inform campaign optimization.
   - title: Customer Care Coordinator
     company: La Beauté Spa du Jour
-    location: City, State
+    company_url: https://www.lespaindy.com
+    location: Indianapolis, IN
     start_date: September 2020
     end_date: April 2021
     current: false
@@ -35,6 +36,7 @@ jobs:
       client experience, retention, and staff efficiency.
   - title: Assistant Marketing Coordinator
     company: Studio 2000 Salon & Spa
+    location: Indianapolis, IN
     start_date: September 2010
     end_date: August 2020
     current: false
