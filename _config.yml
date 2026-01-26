@@ -1,8 +1,8 @@
 # Site Settings
 title: "Resume"
 description: "Professional resume and portfolio"
-url: ""  # Will be set when deployed
-baseurl: "/Zenobia-Portfolio-Website"
+url: "https://zenobiaweigel.com"
+baseurl: ""
 
 # Build Settings
 markdown: kramdown
