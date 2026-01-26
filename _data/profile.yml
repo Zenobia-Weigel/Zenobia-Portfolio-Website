@@ -2,7 +2,7 @@ name: Zenobia Weigel
 title: Public Relations Manager
 email: zsweigel@gmail.com
 location: Indianapolis, IN
-photo: /images/profile.jpg
+photo: /images/Profile Photo.jpg
 summary: |
   Brief professional summary highlighting your expertise and career focus.
 about: >-
@@ -12,11 +12,7 @@ about: >-
 
   You can include multiple paragraphs here to tell your story.
 social:
-  - platform: github
-    url: https://github.com/username
-    username: username
   - platform: linkedin
-    url: https://linkedin.com/in/username
-    username: username
+    url: https://www.linkedin.com/in/zenobia-weigel-88a645a8
   - platform: email
-    url: mailto:email@example.com
+    url: mailto:zsweigel@gmail.com
