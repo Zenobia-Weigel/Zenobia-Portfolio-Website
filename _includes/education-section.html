@@ -1,37 +1,39 @@
 <section class="section education" id="education">
-  <h2 class="section__title">{{ site.data.education.section_title }}</h2>
+  <div class="education__container">
+    <h2 class="section__title section__title--centered">{{ site.data.education.section_title }}</h2>
 
-  <div class="timeline">
-    {% for school in site.data.education.schools %}
-    <div class="timeline__item">
-      <div class="timeline__header">
-        <h3 class="timeline__title">{{ school.degree }}{% if school.field %} in {{ school.field }}{% endif %}</h3>
-        <div class="timeline__subtitle">
-          {% if school.school_url and school.school_url != "" %}
-          <a href="{{ school.school_url }}" target="_blank" rel="noopener">{{ school.school }}</a>
-          {% else %}
-          {{ school.school }}
-          {% endif %}
-          {% if school.location %} &middot; {{ school.location }}{% endif %}
+    <div class="timeline">
+      {% for school in site.data.education.schools %}
+      <div class="timeline__item">
+        <div class="timeline__header">
+          <h3 class="timeline__title">{{ school.degree }}{% if school.field %} in {{ school.field }}{% endif %}</h3>
+          <div class="timeline__subtitle">
+            {% if school.school_url and school.school_url != "" %}
+            <a href="{{ school.school_url }}" target="_blank" rel="noopener">{{ school.school }}</a>
+            {% else %}
+            {{ school.school }}
+            {% endif %}
+            {% if school.location %} &middot; {{ school.location }}{% endif %}
+          </div>
+          <div class="timeline__date">
+            {% if school.start_date %}{{ school.start_date }} &ndash; {% endif %}{{ school.end_date }}
+            {% if school.gpa %} &middot; GPA: {{ school.gpa }}{% endif %}
+          </div>
         </div>
-        <div class="timeline__date">
-          {% if school.start_date %}{{ school.start_date }} &ndash; {% endif %}{{ school.end_date }}
-          {% if school.gpa %} &middot; GPA: {{ school.gpa }}{% endif %}
+
+        {% if school.description %}
+        <div class="timeline__description">
+          {{ school.description | markdownify }}
         </div>
-      </div>
+        {% endif %}
 
-      {% if school.description %}
-      <div class="timeline__description">
-        {{ school.description | markdownify }}
+        {% if school.courses and school.courses.size > 0 %}
+        <div class="timeline__courses">
+          <strong>Relevant Courses:</strong> {{ school.courses | join: ", " }}
+        </div>
+        {% endif %}
       </div>
-      {% endif %}
-
-      {% if school.courses and school.courses.size > 0 %}
-      <div class="timeline__courses">
-        <strong>Relevant Courses:</strong> {{ school.courses | join: ", " }}
-      </div>
-      {% endif %}
+      {% endfor %}
     </div>
-    {% endfor %}
   </div>
 </section>

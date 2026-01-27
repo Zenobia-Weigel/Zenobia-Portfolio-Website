@@ -1,10 +1,12 @@
 .timeline {
   position: relative;
+  max-width: $container-md;
+  margin: 0 auto;
 
   &__item {
     position: relative;
     padding-bottom: $spacing-xl;
-    padding-left: $spacing-lg;
+    padding-left: $spacing-xl;
     border-left: 2px solid $border;
 
     &:last-child {
@@ -15,13 +17,14 @@
     &::before {
       content: "";
       position: absolute;
-      left: -7px;
+      left: -8px;
       top: 0;
-      width: 12px;
-      height: 12px;
+      width: 14px;
+      height: 14px;
       background: $primary-color;
       border-radius: $radius-full;
-      border: 2px solid $background;
+      border: 3px solid $background;
+      box-shadow: 0 0 0 2px $primary-color;
     }
   }
 
@@ -30,10 +33,15 @@
   }
 
   &__title {
-    font-size: $font-size-lg;
+    font-family: $font-family-display;
+    font-size: $font-size-xl;
     font-weight: 600;
     margin-bottom: $spacing-xs;
     color: $text-color;
+
+    @media (min-width: $breakpoint-md) {
+      font-size: $font-size-2xl;
+    }
   }
 
   &__subtitle {
@@ -43,8 +51,10 @@
 
     a {
       color: $primary-color;
+      transition: color $transition-base;
 
       &:hover {
+        color: $secondary-color;
         text-decoration: underline;
       }
     }
@@ -52,12 +62,13 @@
 
   &__date {
     font-size: $font-size-sm;
-    color: $text-light;
+    color: $text-muted;
+    font-style: italic;
   }
 
   &__description {
     font-size: $font-size-md;
-    color: $text-color;
+    color: $text-muted;
     line-height: 1.7;
 
     p:last-child {
@@ -67,16 +78,42 @@
 
   &__highlights {
     margin-top: $spacing-md;
-    padding-left: $spacing-lg;
+    padding-left: 0;
+    list-style: none;
 
     li {
+      position: relative;
       margin-bottom: $spacing-sm;
-      color: $text-color;
+      padding-left: $spacing-lg;
+      color: $text-muted;
       font-size: $font-size-sm;
+      line-height: 1.6;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.5em;
+        width: 6px;
+        height: 6px;
+        background: $primary-color;
+        border-radius: $radius-full;
+      }
 
       &:last-child {
         margin-bottom: 0;
       }
+    }
+  }
+
+  &__courses {
+    margin-top: $spacing-md;
+    font-size: $font-size-sm;
+    color: $text-muted;
+    line-height: 1.6;
+
+    strong {
+      color: $text-color;
     }
   }
 }

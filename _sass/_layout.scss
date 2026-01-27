@@ -51,6 +51,49 @@
     @media (min-width: $breakpoint-md) {
       font-size: $font-size-3xl;
     }
+
+    &--centered {
+      text-align: center;
+      color: $primary-color;
+    }
+  }
+}
+
+// Experience section
+.experience {
+  padding: $spacing-4xl $spacing-lg;
+  background: $background;
+
+  &__container {
+    max-width: $container-lg;
+    margin: 0 auto;
+  }
+}
+
+// Education section
+.education {
+  padding: $spacing-4xl $spacing-lg;
+  background: $background-light;
+
+  &__container {
+    max-width: $container-lg;
+    margin: 0 auto;
+  }
+
+  // Adjust timeline dot border for light background
+  .timeline__item::before {
+    border-color: $background-light;
+  }
+}
+
+// Skills section
+.skills {
+  padding: $spacing-4xl $spacing-lg;
+  background: $background;
+
+  &__container {
+    max-width: $container-xl;
+    margin: 0 auto;
   }
 }
 

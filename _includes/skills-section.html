@@ -1,16 +1,18 @@
 <section class="section skills" id="skills">
-  <h2 class="section__title">{{ site.data.skills.section_title }}</h2>
+  <div class="skills__container">
+    <h2 class="section__title section__title--centered">{{ site.data.skills.section_title }}</h2>
 
-  <div class="skills__grid">
-    {% for category in site.data.skills.categories %}
-    <div class="skills__category">
-      <h3 class="skills__category-name">{{ category.name }}</h3>
-      <ul class="skills__list">
-        {% for skill in category.items %}
-        <li class="skills__item">{{ skill }}</li>
-        {% endfor %}
-      </ul>
+    <div class="skills__grid">
+      {% for category in site.data.skills.categories %}
+      <div class="skills__category">
+        <h3 class="skills__category-name">{{ category.name }}</h3>
+        <ul class="skills__list">
+          {% for skill in category.items %}
+          <li class="skills__item">{{ skill }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
     </div>
-    {% endfor %}
   </div>
 </section>

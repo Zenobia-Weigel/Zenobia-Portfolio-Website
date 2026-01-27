@@ -14,16 +14,28 @@
   }
 
   &__category {
-    background: $surface;
-    padding: $spacing-lg;
+    background: $background-light;
+    padding: $spacing-xl;
     border-radius: $radius-lg;
+    border: 1px solid $border;
+    transition: all $transition-base;
+
+    &:hover {
+      border-color: $primary-color;
+      transform: translateY(-2px);
+      box-shadow: $shadow-glow;
+    }
   }
 
   &__category-name {
-    font-size: $font-size-md;
-    font-weight: 600;
-    margin-bottom: $spacing-md;
-    color: $text-color;
+    font-family: $font-family-display;
+    font-style: italic;
+    font-size: $font-size-lg;
+    font-weight: 500;
+    margin-bottom: $spacing-lg;
+    color: $primary-color;
+    padding-bottom: $spacing-sm;
+    border-bottom: 1px solid $border;
   }
 
   &__list {
@@ -37,11 +49,17 @@
 
   &__item {
     display: inline-block;
-    padding: $spacing-xs $spacing-sm;
+    padding: $spacing-xs $spacing-md;
     background: $background;
     border: 1px solid $border;
-    border-radius: $radius-md;
+    border-radius: $radius-full;
     font-size: $font-size-sm;
     color: $text-color;
+    transition: all $transition-base;
+
+    &:hover {
+      border-color: $primary-color;
+      color: $primary-color;
+    }
   }
 }
