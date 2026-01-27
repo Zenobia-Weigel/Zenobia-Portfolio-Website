@@ -1,0 +1,59 @@
+name: Generate Images & Deploy
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install ImageMagick
+        run: sudo apt-get install -y imagemagick
+
+      - name: Generate responsive hero images
+        run: |
+          for img in images/*-Hero-Image.jpg images/*-Hero-Image.jpeg images/*-Hero-Image.png; do
+            [ -f "$img" ] || continue
+            BASENAME="${img%.*}"
+            EXT="${img##*.}"
+
+            # Only generate if not already exists or source is newer
+            if [ ! -f "${BASENAME}-800.${EXT}" ] || [ "$img" -nt "${BASENAME}-800.${EXT}" ]; then
+              echo "Generating responsive sizes for $img"
+              convert "$img" -resize 800x800\> "${BASENAME}-800.${EXT}"
+              convert "$img" -resize 1200x1200\> "${BASENAME}-1200.${EXT}"
+            fi
+          done
+
+      - name: Commit generated images
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add images/*-800.* images/*-1200.* 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "Auto-generate responsive hero images"
+          git push || true
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+          bundler-cache: true
+
+      - name: Build Jekyll
+        run: bundle exec jekyll build
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4

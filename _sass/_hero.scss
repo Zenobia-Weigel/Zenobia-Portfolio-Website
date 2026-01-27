@@ -22,6 +22,11 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  &__image--loading {
+    opacity: 0;
   }
 
   // Placeholder styling when no image is set

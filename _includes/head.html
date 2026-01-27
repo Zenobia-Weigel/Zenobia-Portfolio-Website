@@ -3,6 +3,13 @@
 <title>{{ site.data.profile.name }} | {{ site.data.profile.title }}</title>
 <meta name="description" content="{{ site.data.profile.summary | strip_html | truncate: 160 }}">
 
+{% if site.data.profile.hero_image and site.data.profile.hero_image != '/images/hero-placeholder.jpg' %}
+<link rel="preload"
+      href="{{ site.data.profile.hero_image | replace: '.jpg', '-1200.jpg' | relative_url }}"
+      as="image"
+      media="(min-width: 768px)">
+{% endif %}
+
 <!-- Google Fonts: Playfair Display + Inter -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

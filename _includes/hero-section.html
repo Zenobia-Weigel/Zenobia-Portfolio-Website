@@ -2,8 +2,13 @@
   <div class="hero__background">
     {% if site.data.profile.hero_image and site.data.profile.hero_image != '/images/hero-placeholder.jpg' %}
       <img src="{{ site.data.profile.hero_image | relative_url }}"
+           srcset="{{ site.data.profile.hero_image | replace: '.jpg', '-800.jpg' | relative_url }} 800w,
+                   {{ site.data.profile.hero_image | replace: '.jpg', '-1200.jpg' | relative_url }} 1200w,
+                   {{ site.data.profile.hero_image | relative_url }} 1920w"
+           sizes="100vw"
            alt="Editorial hero image"
-           class="hero__image">
+           class="hero__image hero__image--loading"
+           onload="this.classList.remove('hero__image--loading')">
     {% else %}
       <div class="hero__placeholder">
         <span class="hero__placeholder-text">Your hero image here</span>
