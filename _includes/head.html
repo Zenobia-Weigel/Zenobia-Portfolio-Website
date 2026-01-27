@@ -7,7 +7,10 @@
 <link rel="preload"
       href="{{ site.data.profile.hero_image | replace: '.jpg', '-1200.jpg' | relative_url }}"
       as="image"
-      media="(min-width: 768px)">
+      imagesrcset="{{ site.data.profile.hero_image | replace: '.jpg', '-800.jpg' | relative_url }} 800w,
+                   {{ site.data.profile.hero_image | replace: '.jpg', '-1200.jpg' | relative_url }} 1200w,
+                   {{ site.data.profile.hero_image | relative_url }} 1920w"
+      imagesizes="100vw">
 {% endif %}
 
 <!-- Google Fonts: Playfair Display + Inter -->
