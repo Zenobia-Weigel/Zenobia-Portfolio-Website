@@ -6,10 +6,26 @@
 <body>
   {% include header.html %}
 
-  <main class="container">
+  <main>
     {{ content }}
   </main>
 
   {% include footer.html %}
+
+  <script>
+    // Add scrolled class to header on scroll
+    (function() {
+      const header = document.querySelector('.header');
+      if (!header) return;
+
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+          header.classList.add('header--scrolled');
+        } else {
+          header.classList.remove('header--scrolled');
+        }
+      });
+    })();
+  </script>
 </body>
 </html>

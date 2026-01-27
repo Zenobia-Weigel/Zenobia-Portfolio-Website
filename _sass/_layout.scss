@@ -1,47 +1,199 @@
+// Container utilities
 .container {
   width: 100%;
-  max-width: 800px;
+  max-width: $container-lg;
   margin: 0 auto;
-  padding: $spacing-lg;
+  padding: 0 $spacing-lg;
 
   @media (min-width: $breakpoint-md) {
-    padding: $spacing-2xl;
+    padding: 0 $spacing-2xl;
+  }
+
+  &--narrow {
+    max-width: $container-md;
+  }
+
+  &--wide {
+    max-width: $container-xl;
+  }
+
+  &--full {
+    max-width: none;
+    padding: 0;
   }
 }
 
-.resume {
+// Portfolio layout
+.portfolio {
   background: $background;
+  min-height: 100vh;
 }
 
+// Section base styles
 .section {
-  padding: $spacing-2xl 0;
-  border-bottom: 1px solid $border;
+  padding: $spacing-4xl 0;
 
-  &:last-child {
-    border-bottom: none;
+  &--dark {
+    background: $background-light;
+  }
+
+  &--centered {
+    text-align: center;
   }
 
   &__title {
-    font-size: $font-size-xl;
-    font-weight: 600;
+    font-family: $font-family-display;
+    font-style: italic;
+    font-size: $font-size-2xl;
     color: $text-color;
     margin-bottom: $spacing-xl;
-    padding-bottom: $spacing-sm;
-    border-bottom: 2px solid $primary-color;
-    display: inline-block;
+
+    @media (min-width: $breakpoint-md) {
+      font-size: $font-size-3xl;
+    }
   }
 }
 
+// Header (minimal for portfolio)
 .header {
-  background: $surface;
-  border-bottom: 1px solid $border;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: $spacing-lg 0;
+  transition: all $transition-slow;
+
+  &--scrolled {
+    background: rgba($background, 0.95);
+    backdrop-filter: blur(10px);
+    padding: $spacing-md 0;
+    box-shadow: 0 1px 0 $border;
+  }
 }
 
-.footer {
-  background: $surface;
-  border-top: 1px solid $border;
-  padding: $spacing-lg 0;
-  text-align: center;
-  font-size: $font-size-sm;
-  color: $text-light;
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: $container-xl;
+  margin: 0 auto;
+  padding: 0 $spacing-lg;
+
+  @media (min-width: $breakpoint-md) {
+    padding: 0 $spacing-2xl;
+  }
+
+  &__brand {
+    font-family: $font-family-body;
+    font-size: $font-size-sm;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: $text-color;
+    text-decoration: none;
+    transition: color $transition-base;
+
+    &:hover {
+      color: $primary-color;
+      text-decoration: none;
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: $spacing-lg;
+  }
+
+  &__link {
+    font-size: $font-size-sm;
+    color: $text-muted;
+    text-decoration: none;
+    transition: color $transition-base;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
 }
+
+// Footer
+.footer {
+  background: $background-light;
+  border-top: 1px solid $border;
+  padding: $spacing-3xl 0;
+
+  &__container {
+    max-width: $container-xl;
+    margin: 0 auto;
+    padding: 0 $spacing-lg;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $spacing-lg;
+    text-align: center;
+
+    @media (min-width: $breakpoint-md) {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+      padding: 0 $spacing-2xl;
+    }
+  }
+
+  &__copyright {
+    font-size: $font-size-sm;
+    color: $text-muted;
+    margin: 0;
+  }
+
+  &__links {
+    display: flex;
+    gap: $spacing-lg;
+  }
+
+  &__link {
+    font-size: $font-size-sm;
+    color: $text-muted;
+    text-decoration: none;
+    transition: color $transition-base;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+// Full-width section
+.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+// Spacing utilities
+.mt-0 { margin-top: 0; }
+.mt-1 { margin-top: $spacing-sm; }
+.mt-2 { margin-top: $spacing-md; }
+.mt-3 { margin-top: $spacing-lg; }
+.mt-4 { margin-top: $spacing-xl; }
+.mt-5 { margin-top: $spacing-2xl; }
+
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: $spacing-sm; }
+.mb-2 { margin-bottom: $spacing-md; }
+.mb-3 { margin-bottom: $spacing-lg; }
+.mb-4 { margin-bottom: $spacing-xl; }
+.mb-5 { margin-bottom: $spacing-2xl; }
+
+// Text utilities
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.text-muted { color: $text-muted; }
+.text-primary { color: $primary-color; }

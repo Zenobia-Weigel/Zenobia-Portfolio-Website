@@ -1,5 +1,14 @@
 <footer class="footer">
-  <div class="container">
-    <p>&copy; {{ 'now' | date: '%Y' }} {{ site.data.profile.name }}. Built with Jekyll and Pages CMS.</p>
+  <div class="footer__container">
+    <p class="footer__copyright">
+      &copy; {{ 'now' | date: '%Y' }} {{ site.data.profile.name }}
+    </p>
+    <div class="footer__links">
+      {% for link in site.data.profile.social %}
+        <a href="{{ link.url }}" class="footer__link" target="_blank" rel="noopener noreferrer">
+          {{ link.platform | capitalize }}
+        </a>
+      {% endfor %}
+    </div>
   </div>
 </footer>
