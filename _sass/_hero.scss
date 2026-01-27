@@ -1,0 +1,189 @@
+// Hero Section Styles
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  // Placeholder styling when no image is set
+  &__placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      135deg,
+      $background-light 0%,
+      $background 50%,
+      lighten($background, 5%) 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background:
+        radial-gradient(circle at 20% 50%, rgba($primary-color, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 30%, rgba($primary-color, 0.05) 0%, transparent 40%);
+    }
+  }
+
+  &__placeholder-text {
+    color: $text-muted;
+    font-size: $font-size-sm;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    opacity: 0.5;
+  }
+
+  // Gradient overlay for text readability
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba($background, 0.3) 0%,
+      rgba($background, 0.5) 50%,
+      rgba($background, 0.8) 100%
+    );
+    z-index: 1;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: $spacing-xl;
+    max-width: $container-lg;
+  }
+
+  &__name {
+    font-family: $font-family-body;
+    font-size: $font-size-sm;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    color: $text-muted;
+    margin-bottom: $spacing-xl;
+  }
+
+  &__tagline {
+    font-family: $font-family-display;
+    font-style: italic;
+    font-weight: 400;
+    font-size: $font-size-4xl;
+    line-height: 1.1;
+    color: $text-color;
+    margin-bottom: $spacing-2xl;
+    letter-spacing: -0.02em;
+
+    @media (min-width: $breakpoint-md) {
+      font-size: $font-size-5xl;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+      font-size: $font-size-6xl;
+    }
+
+    @media (min-width: $breakpoint-xl) {
+      font-size: $font-size-7xl;
+    }
+  }
+
+  &__subtitle {
+    font-family: $font-family-body;
+    font-size: $font-size-md;
+    color: $text-muted;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.7;
+
+    @media (min-width: $breakpoint-md) {
+      font-size: $font-size-lg;
+    }
+  }
+
+  &__scroll-indicator {
+    position: absolute;
+    bottom: $spacing-2xl;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    color: $text-muted;
+    font-size: $font-size-xs;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $spacing-sm;
+    opacity: 0.7;
+    transition: opacity $transition-base;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &::after {
+      content: '';
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, $primary-color, transparent);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+  }
+}
+
+@keyframes scrollPulse {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scaleY(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+// Hero with image variant
+.hero--with-image {
+  .hero__overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba($background, 0.4) 0%,
+      rgba($background, 0.6) 50%,
+      rgba($background, 0.9) 100%
+    );
+  }
+}
+
+// Compact hero variant (for internal pages)
+.hero--compact {
+  min-height: 60vh;
+}

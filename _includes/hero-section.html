@@ -1,0 +1,33 @@
+<section class="hero {% if site.data.profile.hero_image and site.data.profile.hero_image != '/images/hero-placeholder.jpg' %}hero--with-image{% endif %}">
+  <div class="hero__background">
+    {% if site.data.profile.hero_image and site.data.profile.hero_image != '/images/hero-placeholder.jpg' %}
+      <img src="{{ site.data.profile.hero_image | relative_url }}"
+           alt="Editorial hero image"
+           class="hero__image">
+    {% else %}
+      <div class="hero__placeholder">
+        <span class="hero__placeholder-text">Your hero image here</span>
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="hero__overlay"></div>
+
+  <div class="hero__content">
+    <p class="hero__name">{{ site.data.profile.name }}</p>
+
+    {% if site.data.profile.tagline %}
+      <h1 class="hero__tagline">{{ site.data.profile.tagline }}</h1>
+    {% else %}
+      <h1 class="hero__tagline">{{ site.data.profile.title }}</h1>
+    {% endif %}
+
+    {% if site.data.profile.summary %}
+      <p class="hero__subtitle">{{ site.data.profile.summary }}</p>
+    {% endif %}
+  </div>
+
+  <div class="hero__scroll-indicator">
+    <span>Scroll</span>
+  </div>
+</section>

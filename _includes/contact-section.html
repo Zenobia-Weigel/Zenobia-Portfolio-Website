@@ -1,0 +1,25 @@
+<section class="contact-section">
+  <div class="contact-section__container">
+    <h2 class="contact-section__heading">Let's Connect</h2>
+    <p class="contact-section__text">
+      I'm always interested in hearing about new opportunities,
+      collaborations, and conversations about PR and communications.
+    </p>
+
+    {% if site.data.profile.email %}
+    <a href="mailto:{{ site.data.profile.email }}" class="contact-section__email">
+      {{ site.data.profile.email }}
+    </a>
+    {% endif %}
+
+    {% if site.data.profile.social and site.data.profile.social.size > 0 %}
+    <div class="contact-section__social">
+      {% for link in site.data.profile.social %}
+        <a href="{{ link.url }}" class="contact-section__social-link" target="_blank" rel="noopener noreferrer">
+          {{ link.platform | capitalize }}
+        </a>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</section>

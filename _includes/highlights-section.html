@@ -1,0 +1,16 @@
+{% assign highlights = site.data.highlights.items %}
+
+{% if highlights and highlights.size > 0 %}
+<section class="highlights">
+  <div class="highlights__container">
+    <div class="highlights__grid">
+      {% for item in highlights %}
+      <div class="highlight-card">
+        <span class="highlight-card__stat">{{ item.stat }}</span>
+        <span class="highlight-card__label">{{ item.label }}</span>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}

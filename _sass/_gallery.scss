@@ -1,0 +1,241 @@
+// Photo Gallery Styles
+.gallery {
+  padding: $spacing-4xl 0;
+
+  &__header {
+    text-align: center;
+    margin-bottom: $spacing-3xl;
+    padding: 0 $spacing-lg;
+  }
+
+  &__title {
+    font-family: $font-family-display;
+    font-style: italic;
+    font-size: $font-size-3xl;
+    color: $text-color;
+    margin-bottom: $spacing-md;
+
+    @media (min-width: $breakpoint-md) {
+      font-size: $font-size-4xl;
+    }
+  }
+
+  &__subtitle {
+    color: $text-muted;
+    font-size: $font-size-md;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-md;
+    padding: 0 $spacing-md;
+
+    @media (min-width: $breakpoint-sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: $breakpoint-lg) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: $spacing-lg;
+      padding: 0 $spacing-lg;
+    }
+
+    @media (min-width: $breakpoint-xl) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+// Individual photo item
+.photo-item {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4/5;
+  background: $background-light;
+  border-radius: $radius-sm;
+  cursor: pointer;
+  transition: transform $transition-slow;
+
+  &:hover {
+    transform: translateY(-4px);
+
+    .photo-item__overlay {
+      opacity: 1;
+    }
+
+    .photo-item__image {
+      transform: scale(1.05);
+    }
+  }
+
+  // Varying aspect ratios for visual interest
+  &:nth-child(3n+1) {
+    aspect-ratio: 4/5;
+  }
+
+  &:nth-child(3n+2) {
+    aspect-ratio: 1/1;
+  }
+
+  &:nth-child(3n) {
+    aspect-ratio: 3/4;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform $transition-slow;
+  }
+
+  // Placeholder styling
+  &__placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+      135deg,
+      $background-light 0%,
+      darken($background-light, 3%) 100%
+    );
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60px;
+      height: 60px;
+      border: 2px solid $border;
+      border-radius: $radius-md;
+      opacity: 0.5;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 30px;
+      height: 30px;
+      border: 2px solid $border;
+      border-radius: $radius-full;
+      opacity: 0.3;
+    }
+  }
+
+  &__placeholder-text {
+    position: absolute;
+    bottom: $spacing-lg;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $text-muted;
+    font-size: $font-size-xs;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    opacity: 0.5;
+    white-space: nowrap;
+  }
+
+  &__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: $spacing-lg;
+    background: linear-gradient(
+      to top,
+      rgba($background, 0.9) 0%,
+      rgba($background, 0.5) 50%,
+      transparent 100%
+    );
+    opacity: 0;
+    transition: opacity $transition-base;
+  }
+
+  &__caption {
+    color: $text-color;
+    font-size: $font-size-sm;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  &__category {
+    display: inline-block;
+    color: $primary-color;
+    font-size: $font-size-xs;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: $spacing-xs;
+  }
+}
+
+// Featured photo (spans 2 columns)
+.photo-item--featured {
+  @media (min-width: $breakpoint-lg) {
+    grid-column: span 2;
+    aspect-ratio: 16/9;
+  }
+}
+
+// Full-width photo strip
+.photo-strip {
+  width: 100%;
+  overflow: hidden;
+  margin: $spacing-4xl 0;
+
+  &__image {
+    width: 100%;
+    height: 50vh;
+    min-height: 400px;
+    max-height: 600px;
+    object-fit: cover;
+  }
+
+  &__placeholder {
+    width: 100%;
+    height: 50vh;
+    min-height: 400px;
+    max-height: 600px;
+    background: linear-gradient(
+      135deg,
+      $background-light 0%,
+      $background 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background:
+        linear-gradient(90deg, transparent 50%, rgba($border, 0.1) 50%),
+        linear-gradient(rgba($border, 0.1) 50%, transparent 50%);
+      background-size: 40px 40px;
+      opacity: 0.3;
+    }
+  }
+
+  &__placeholder-text {
+    color: $text-muted;
+    font-size: $font-size-sm;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    opacity: 0.5;
+  }
+}

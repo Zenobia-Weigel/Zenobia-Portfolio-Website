@@ -1,0 +1,42 @@
+{% assign photos = site.data.gallery.photos %}
+
+<section class="gallery">
+  {% if include.title %}
+  <div class="gallery__header">
+    <h2 class="gallery__title">{{ include.title }}</h2>
+    {% if include.subtitle %}
+    <p class="gallery__subtitle">{{ include.subtitle }}</p>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  <div class="gallery__grid">
+    {% for photo in photos limit: include.limit | default: 12 %}
+    <article class="photo-item {% if forloop.first and include.featured %}photo-item--featured{% endif %}">
+      {% assign is_placeholder = photo.image | contains: "placeholder" %}
+
+      {% if is_placeholder %}
+        <div class="photo-item__placeholder">
+          <span class="photo-item__placeholder-text">Photo {{ forloop.index }}</span>
+        </div>
+      {% else %}
+        <img src="{{ photo.image | relative_url }}"
+             alt="{{ photo.caption | default: 'Portfolio photo' }}"
+             class="photo-item__image"
+             loading="lazy">
+      {% endif %}
+
+      {% if photo.caption or photo.category %}
+      <div class="photo-item__overlay">
+        {% if photo.caption %}
+        <p class="photo-item__caption">{{ photo.caption }}</p>
+        {% endif %}
+        {% if photo.category %}
+        <span class="photo-item__category">{{ photo.category | replace: "-", " " }}</span>
+        {% endif %}
+      </div>
+      {% endif %}
+    </article>
+    {% endfor %}
+  </div>
+</section>

@@ -1,0 +1,18 @@
+<section class="story-section">
+  <div class="story-section__container">
+    {% if site.data.profile.intro_text %}
+    <div class="story-section__intro">
+      <p class="story-section__text">{{ site.data.profile.intro_text }}</p>
+    </div>
+    {% endif %}
+
+    {% if site.data.profile.about %}
+    <div class="story-section__about">
+      <h2 class="story-section__heading">About</h2>
+      <div class="story-section__content">
+        {{ site.data.profile.about | markdownify }}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</section>
