@@ -50,16 +50,16 @@
   &__item {
     display: inline-block;
     padding: $spacing-xs $spacing-md;
-    background: $background;
+    background: transparent;
     border: 1px solid $border;
     border-radius: $radius-full;
     font-size: $font-size-sm;
-    color: $text-color;
+    color: $text-muted;
     transition: all $transition-base;
 
     &:hover {
       border-color: $primary-color;
-      color: $primary-color;
+      color: $text-color;
     }
   }
 }
