@@ -36,6 +36,18 @@ content:
       - name: photo
         label: Profile Photo
         type: image
+      - name: tagline
+        label: Homepage Tagline
+        type: string
+        description: Bold statement for hero (e.g., "STORYTELLER. STRATEGIST. PR PRO.")
+      - name: hero_image
+        label: Hero Background Image
+        type: image
+        description: Large editorial photo for homepage hero
+      - name: intro_text
+        label: Introduction Text
+        type: text
+        description: Conversational welcome text for the story section
       - name: summary
         label: Brief Summary
         type: text
@@ -231,6 +243,65 @@ content:
             type: string
             list: true
             description: Individual skills in this category
+
+  # Photo Gallery
+  - name: gallery
+    label: Photo Gallery
+    path: _data/gallery.yml
+    type: file
+    description: Editorial photos for your portfolio
+    fields:
+      - name: photos
+        label: Photos
+        type: object
+        list: true
+        fields:
+          - name: image
+            label: Photo
+            type: image
+            required: true
+          - name: caption
+            label: Caption
+            type: string
+            description: Story or context for this photo
+          - name: category
+            label: Category
+            type: select
+            options:
+              values:
+                - value: events
+                  label: Events & Trade Shows
+                - value: campaigns
+                  label: Campaigns & Projects
+                - value: lifestyle
+                  label: Lifestyle & Personal
+                - value: work
+                  label: Work Life
+
+  # Career Highlights
+  - name: highlights
+    label: Career Highlights
+    path: _data/highlights.yml
+    type: file
+    description: Visual career milestone cards
+    fields:
+      - name: items
+        label: Highlight Cards
+        type: object
+        list: true
+        fields:
+          - name: stat
+            label: Statistic or Number
+            type: string
+            description: e.g., "5+" or "100+"
+          - name: label
+            label: Label
+            type: string
+            description: e.g., "Years in PR" or "Press Releases"
+          - name: icon
+            label: Icon (optional)
+            type: string
+            description: Icon name if using icon library
 
   # Site Settings
   - name: settings

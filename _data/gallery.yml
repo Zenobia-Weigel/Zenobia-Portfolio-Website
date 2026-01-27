@@ -1,0 +1,19 @@
+photos:
+  - image: /images/gallery-placeholder-1.jpg
+    caption: "Behind the scenes at the THG Automation trade show"
+    category: events
+  - image: /images/gallery-placeholder-2.jpg
+    caption: "Product launch campaign shoot"
+    category: campaigns
+  - image: /images/gallery-placeholder-3.jpg
+    caption: "Team celebration after successful PR campaign"
+    category: work
+  - image: /images/gallery-placeholder-4.jpg
+    caption: "Media day at industry conference"
+    category: events
+  - image: /images/gallery-placeholder-5.jpg
+    caption: "Creative brainstorm session"
+    category: work
+  - image: /images/gallery-placeholder-6.jpg
+    caption: "Press release launch day"
+    category: campaigns

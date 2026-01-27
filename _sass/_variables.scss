@@ -1,14 +1,20 @@
-// Colors - Modern minimal palette
-$primary-color: #2563eb;
-$secondary-color: #1e40af;
-$text-color: #1f2937;
-$text-light: #6b7280;
-$background: #ffffff;
-$surface: #f9fafb;
-$border: #e5e7eb;
+// Colors - Editorial Navy Palette
+$primary-color: #d4a574;        // Warm gold accent
+$secondary-color: #c4956a;      // Darker gold for hover
+$text-color: #faf9f6;           // Cream/off-white
+$text-muted: #a8a29e;           // Muted cream for secondary text
+$background: #0f172a;           // Deep navy
+$background-light: #1e293b;     // Lighter navy for cards
+$surface: #1e293b;              // Surface color
+$border: #334155;               // Navy border
+
+// Legacy color aliases for compatibility
+$text-light: $text-muted;
 
 // Typography
-$font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$font-family-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+$font-family-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$font-family: $font-family-body;
 $font-size-base: 16px;
 $line-height: 1.6;
 
@@ -21,6 +27,9 @@ $font-size-xl: 1.25rem;
 $font-size-2xl: 1.5rem;
 $font-size-3xl: 1.875rem;
 $font-size-4xl: 2.25rem;
+$font-size-5xl: 3rem;
+$font-size-6xl: 3.75rem;
+$font-size-7xl: 4.5rem;
 
 // Spacing
 $spacing-unit: 1rem;
@@ -31,20 +40,36 @@ $spacing-lg: 1.5rem;
 $spacing-xl: 2rem;
 $spacing-2xl: 3rem;
 $spacing-3xl: 4rem;
+$spacing-4xl: 6rem;
+$spacing-5xl: 8rem;
 
 // Breakpoints
 $breakpoint-sm: 640px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 1024px;
 $breakpoint-xl: 1280px;
+$breakpoint-2xl: 1536px;
 
 // Border radius
 $radius-sm: 0.25rem;
 $radius-md: 0.375rem;
 $radius-lg: 0.5rem;
+$radius-xl: 1rem;
 $radius-full: 9999px;
 
-// Shadows
-$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+// Shadows (adjusted for dark theme)
+$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+$shadow-glow: 0 0 30px rgba(212, 165, 116, 0.2);
+
+// Transitions
+$transition-fast: 0.15s ease;
+$transition-base: 0.2s ease;
+$transition-slow: 0.3s ease;
+
+// Container widths
+$container-sm: 640px;
+$container-md: 768px;
+$container-lg: 1024px;
+$container-xl: 1280px;

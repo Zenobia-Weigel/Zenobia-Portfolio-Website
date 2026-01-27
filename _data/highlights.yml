@@ -1,0 +1,13 @@
+items:
+  - stat: "5+"
+    label: "Years in PR"
+    icon: "briefcase"
+  - stat: "100+"
+    label: "Press Releases"
+    icon: "document"
+  - stat: "B2B & Consumer"
+    label: "Industry Experience"
+    icon: "globe"
+  - stat: "50+"
+    label: "Trade Shows"
+    icon: "calendar"

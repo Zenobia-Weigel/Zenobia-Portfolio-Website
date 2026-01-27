@@ -3,6 +3,8 @@ title: Public Relations Manager
 email: zsweigel@gmail.com
 location: Indianapolis, IN
 photo: /images/Profile Photo.jpg
+tagline: "STORYTELLER. STRATEGIST. PR PRO."
+hero_image: /images/hero-placeholder.jpg
 summary: Strategic Public Relations Manager with 5+ years of experience leading
   integrated PR, content, and event marketing initiatives across B2B and
   consumer industries.
@@ -13,6 +15,11 @@ about: Strategic Public Relations Manager with 5+ years of experience leading
   Experienced in media relations, B2B email marketing, social media strategy,
   and trade show execution, with a strong focus on measurable results and brand
   credibility.
+intro_text: >
+  Welcome to my corner of the internet. I'm a PR professional who believes
+  every brand has a story worth telling—and I'm here to help tell it.
+  From trade show floors to press release launches, I thrive on turning
+  complex messages into compelling narratives.
 social:
   - platform: linkedin
     url: https://www.linkedin.com/in/zenobia-weigel-88a645a8
