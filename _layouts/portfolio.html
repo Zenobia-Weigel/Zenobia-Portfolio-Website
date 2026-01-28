@@ -15,7 +15,9 @@ layout: default
 
   {% include skills-section.html %}
 
-  {% include photo-grid.html title="Visual Stories" subtitle="A glimpse into the world of PR, events, and creative campaigns" %}
+  {% if site.data.settings.show_gallery %}
+    {% include photo-grid.html title="Visual Stories" subtitle="A glimpse into the world of PR, events, and creative campaigns" %}
+  {% endif %}
 
   {% include contact-section.html %}
 </article>
