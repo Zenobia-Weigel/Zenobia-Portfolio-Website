@@ -277,6 +277,12 @@ content:
                   label: Lifestyle & Personal
                 - value: work
                   label: Work Life
+                - value: media-coverage
+                  label: Media Coverage
+          - name: link
+            label: Link URL
+            type: string
+            description: Optional link to article or related page
 
   # Career Highlights
   - name: highlights
