@@ -145,14 +145,27 @@
     left: 0;
     right: 0;
     padding: $spacing-lg;
-    background: linear-gradient(
-      to top,
-      rgba($background, 0.9) 0%,
-      rgba($background, 0.5) 50%,
-      transparent 100%
-    );
-    opacity: 1;
     transition: opacity $transition-base;
+    isolation: isolate;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 300%;
+      background: linear-gradient(
+        to top,
+        rgba($background, 0.95) 0%,
+        rgba($background, 0.85) 25%,
+        rgba($background, 0.5) 50%,
+        rgba($background, 0.2) 70%,
+        transparent 100%
+      );
+      pointer-events: none;
+      z-index: -1;
+    }
   }
 
   &__caption {

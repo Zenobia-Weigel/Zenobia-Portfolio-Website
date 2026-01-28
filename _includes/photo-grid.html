@@ -17,9 +17,7 @@
       <a href="{{ photo.link }}" target="_blank" rel="noopener" class="photo-item__link">
       {% endif %}
 
-      {% assign is_placeholder = photo.image | contains: "placeholder" %}
-
-      {% if is_placeholder %}
+      {% if photo.image contains "placeholder" %}
         <div class="photo-item__placeholder">
           <span class="photo-item__placeholder-text">Photo {{ forloop.index }}</span>
         </div>
