@@ -13,9 +13,11 @@
              alt="{{ site.data.profile.name }}"
              class="story-section__photo-img">
       </div>
-      <h2 class="story-section__heading">About</h2>
-      <div class="story-section__content">
-        {{ site.data.profile.about | markdownify }}
+      <div class="story-section__about-content">
+        <h2 class="story-section__heading">About</h2>
+        <div class="story-section__content">
+          {{ site.data.profile.about | markdownify }}
+        </div>
       </div>
     </div>
     {% endif %}

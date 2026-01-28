@@ -109,12 +109,20 @@
   &__about {
     border-top: 1px solid $border;
     padding-top: $spacing-3xl;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $spacing-xl;
+
+    @media (min-width: $breakpoint-md) {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: $spacing-2xl;
+    }
   }
 
   &__photo {
-    display: flex;
-    justify-content: center;
-    margin-bottom: $spacing-xl;
+    flex-shrink: 0;
   }
 
   &__photo-img {
@@ -132,6 +140,10 @@
     }
   }
 
+  &__about-content {
+    flex: 1;
+  }
+
   &__heading {
     font-family: $font-family-display;
     font-style: italic;
@@ -139,6 +151,10 @@
     color: $primary-color;
     margin-bottom: $spacing-xl;
     text-align: center;
+
+    @media (min-width: $breakpoint-md) {
+      text-align: left;
+    }
   }
 
   &__content {
