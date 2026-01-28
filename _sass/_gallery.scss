@@ -71,10 +71,6 @@
   &:hover {
     transform: translateY(-4px);
 
-    .photo-item__overlay {
-      opacity: 1;
-    }
-
     .photo-item__image {
       transform: scale(1.05);
     }
@@ -155,7 +151,7 @@
       rgba($background, 0.5) 50%,
       transparent 100%
     );
-    opacity: 0;
+    opacity: 1;
     transition: opacity $transition-base;
   }
 
