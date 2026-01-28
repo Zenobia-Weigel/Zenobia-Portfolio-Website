@@ -8,6 +8,11 @@
 
     {% if site.data.profile.about %}
     <div class="story-section__about">
+      <div class="story-section__photo">
+        <img src="{{ site.data.profile.photo | relative_url }}"
+             alt="{{ site.data.profile.name }}"
+             class="story-section__photo-img">
+      </div>
       <h2 class="story-section__heading">About</h2>
       <div class="story-section__content">
         {{ site.data.profile.about | markdownify }}

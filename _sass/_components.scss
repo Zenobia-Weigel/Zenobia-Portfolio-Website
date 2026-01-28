@@ -111,6 +111,27 @@
     padding-top: $spacing-3xl;
   }
 
+  &__photo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: $spacing-xl;
+  }
+
+  &__photo-img {
+    width: 150px;
+    height: 150px;
+    border-radius: $radius-full;
+    object-fit: cover;
+    object-position: center top;
+    border: 3px solid $primary-color;
+    box-shadow: $shadow-glow;
+
+    @media (min-width: $breakpoint-md) {
+      width: 180px;
+      height: 180px;
+    }
+  }
+
   &__heading {
     font-family: $font-family-display;
     font-style: italic;
