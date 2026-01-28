@@ -12,7 +12,11 @@
 
   <div class="gallery__grid">
     {% for photo in photos limit: include.limit | default: 12 %}
-    <article class="photo-item {% if forloop.first and include.featured %}photo-item--featured{% endif %}">
+    <article class="photo-item">
+      {% if photo.link %}
+      <a href="{{ photo.link }}" target="_blank" rel="noopener" class="photo-item__link">
+      {% endif %}
+
       {% assign is_placeholder = photo.image | contains: "placeholder" %}
 
       {% if is_placeholder %}
@@ -35,6 +39,10 @@
         <span class="photo-item__category">{{ photo.category | replace: "-", " " }}</span>
         {% endif %}
       </div>
+      {% endif %}
+
+      {% if photo.link %}
+      </a>
       {% endif %}
     </article>
     {% endfor %}

@@ -1,19 +1,40 @@
 photos:
   - image: /images/gallery-placeholder-1.jpg
-    caption: "Behind the scenes at the THG Automation trade show"
-    category: events
+    caption: "THG Automation featured in Wall Street Journal coverage of U.S. manufacturing's robotic resurgence"
+    category: media-coverage
+    link: https://thgautomation.com/news/thg-automations-collaborative-welding-systems-featured-in-the-wall-street-journal-coverage-of-u-s-manufacturings-robotic-resurgence/
+
   - image: /images/gallery-placeholder-2.jpg
-    caption: "Product launch campaign shoot"
-    category: campaigns
+    caption: "Pik Rite Inc. success story published in The Fabricator"
+    category: media-coverage
+    link: https://thgautomation.com/news/thg-automation-customer-pik-rite-inc-featured-in-the-fabricator-for-success-with-collaborative-robotic-welding/
+
   - image: /images/gallery-placeholder-3.jpg
-    caption: "Team celebration after successful PR campaign"
-    category: work
+    caption: "West Coast Manufacturing collaboration featured in Automation World"
+    category: media-coverage
+    link: https://thgautomation.com/news/automation-world-features-thg-automation-west-coast-manufacturing/
+
   - image: /images/gallery-placeholder-4.jpg
-    caption: "Media day at industry conference"
+    caption: "Coordinating THG Automation's presence at CMTS 2025 in Toronto"
     category: events
+    link: https://thgautomation.com/news/from-the-u-s-to-canada-thg-automation-and-bth-sales-unite-at-cmts-2025/
+
   - image: /images/gallery-placeholder-5.jpg
-    caption: "Creative brainstorm session"
-    category: work
+    caption: "Managing THG Automation's return to the International WorkBoat Show"
+    category: events
+    link: https://thgautomation.com/news/thg-automation-to-return-to-the-2025-international-workboat-show-in-new-orleans/
+
   - image: /images/gallery-placeholder-6.jpg
-    caption: "Press release launch day"
+    caption: "Guest exhibitor coordination at PRI 2025 for high-performance manufacturing"
+    category: events
+    link: https://thgautomation.com/news/collaborative-robotic-welding-pri-2025/
+
+  - image: /images/gallery-placeholder-7.jpg
+    caption: "Launch communications for Universal Robots UR8 Long integration"
     category: campaigns
+    link: https://thgautomation.com/news/universal-robots-new-ur8-long-joins-thg-automation/
+
+  - image: /images/gallery-placeholder-8.jpg
+    caption: "Strategic communications for BTH Sales partnership and Canadian expansion"
+    category: campaigns
+    link: https://thgautomation.com/news/thg-automation-canada-siegmund-welding-tables/
