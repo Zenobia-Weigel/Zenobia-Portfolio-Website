@@ -330,6 +330,10 @@ content:
         label: Show Download PDF Button
         type: boolean
         default: true
+      - name: show_gallery
+        label: Show Photo Gallery Section
+        type: boolean
+        default: true
       - name: pdf_url
         label: PDF Resume URL
         type: string
