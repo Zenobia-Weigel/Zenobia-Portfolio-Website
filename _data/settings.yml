@@ -1,7 +1,7 @@
 primary_color: "#2563eb"
 secondary_color: "#1e40af"
 show_pdf_button: false
-show_gallery: false
+show_gallery: true
 section_order:
   - about
   - experience
