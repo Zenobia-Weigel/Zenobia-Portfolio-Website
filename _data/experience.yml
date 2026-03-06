@@ -1,13 +1,23 @@
 section_title: Experience
 show: true
 jobs:
+  - title: Narrative & Communications Strategy Consultant
+    company: Freelance | Consulting
+    company_url: https://zenobiaweigel.com
+    location: Indianapolis, IN
+    start_date: January 2026
+    end_date: Present
+    current: true
+    description: Provide strategic communications, public relations, and content
+      support for mission-driven organizations, B2B companies, and creative
+      teams navigating growth, transition, or increased visibility.
   - title: Public Relations Manager
     company: The Hendey Group & THG Automation
     company_url: https://thgautomation.com
     location: Indianapolis, IN
     start_date: July 2021
-    end_date: Present
-    current: true
+    end_date: January 2026
+    current: false
     description: Lead integrated public relations and communications initiatives to
       increase brand visibility and media engagement across B2B and industrial
       automation audiences, securing coverage in local and industry
